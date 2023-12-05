@@ -19,6 +19,7 @@
   --white-alpha-color: rgba(255, 255, 255, 0.5);
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --header-height:6rem;
+  --max-width:1200px;
   
 }
 
@@ -93,6 +94,32 @@ p{
 
 /*COMPONENTS*/
 
+/*HERO IMAGE*/
+
+.hero-image{
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--hero-attachment);
+}
+
+.hero-image-opacity{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hero-opacity-color);
+  text-align: center;
+}
+
+.hero-image-title{
+  font-size: 8vw;
+  color: var(--hero-text-color);
+  text-align: center;
+}
+
 /*MENU*/
 
 .menu-btn{
@@ -164,10 +191,42 @@ p{
   }
 }
 
+/*PROGRESS BAR*/
+
+progress{
+  width: 100%;
+  height: 1rem;
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-bar{
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-value{
+  background-color: var(--gray-dark-color);
+}
+
+progress::-moz-progress-bar{
+  background-color: var(--gray-dark-color);
+}
+
 /*UTILITIES*/
 
 .box-shadow-1 {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn{
+  border-radius: .5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
 }
 
 .container{
@@ -179,6 +238,7 @@ p{
 .none{
     display: none;
 }
+
 
 /*SITE STYLES*/
 .header{

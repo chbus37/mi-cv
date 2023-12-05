@@ -21,7 +21,8 @@
           >
             <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
           </svg>
-          <svg class="none"
+          <svg
+            class="none"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -33,22 +34,99 @@
           </svg>
         </button>
         <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#acerca">Acerca</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#portafolio">Portfolio</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#contacto">Contacto</a>
+          <a href="#inicio">Inicio</a>
+          <a href="#acerca">Acerca</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#portafolio">Portfolio</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </section>
     </header>
 
     <section id="inicio" class="home">
-      <h2>Home</h2>
+      <article
+        class="hero-image"
+        style="
+          --hero-image: url('./assets/heroimage2.jpg');
+          --hero-attachment: fixed;
+        "
+      >
+        <aside
+          class="hero-image-opacity"
+          style="--hero-opacity-color: var(--black-alpha-color)"
+        >
+          <div class="hero-image-content">
+            <h2
+              class="hero-image-title"
+              style="--hero-text-color: var(--white-color)"
+            >
+              Bienvenid@s<br />
+              a mi sitio
+            </h2>
+            <a href="#contacto" class="btn">CONTACTAME</a>
+          </div>
+        </aside>
+      </article>
     </section>
 
     <section id="acerca" class="about">
-      <h2>Acerca</h2>
+      <artticle>
+        <aside class="slogan">
+          <h1>Christian Bustos</h1>
+          <h5>Desarrollador Frontend</h5>
+        </aside>
+        <p>
+          Como desarrollador frontend trainee, mi enfoque se centra en aprender
+          y aplicar las últimas tecnologías para crear experiencias web
+          cautivadoras. Durante mi formación, he adquirido habilidades sólidas
+          en HTML, CSS y JavaScript, fundamentales para la construcción de
+          interfaces de usuario modernas y responsivas.
+        </p>
+        <p>
+          Mi pasión por la programación web se refleja en mi capacidad para
+          enfrentar desafíos y encontrar soluciones creativas. Estoy
+          familiarizado con el uso de frameworks como React, y continuamente
+          busco oportunidades para mejorar mis habilidades en el desarrollo de
+          aplicaciones interactivas y dinámicas.
+        </p>
+        <p>
+          Como trainee, estoy comprometido con el aprendizaje continuo y la
+          adaptabilidad a las tendencias cambiantes del desarrollo frontend.
+        </p>
+        <div>
+          <a class="btn" href="./assets/RESUME IT.pdf" target="_blank" rel="noopener">DESCARGA MI CV</a>
+        </div>
+      </artticle>
+      <article>
+        <img class="gray-scale" src="./assets/profile-photo.jpeg" alt="christianbustos"/>
+      </article>
+      <article>
+        <h2>Mis habilidades</h2>
+        <div class="progress">
+          <p>
+            <b>Desarrollo Web Frontend</b>
+            <b>60%</b>
+          </p>
+          <progress value="60" min="0" max="100"></progress>
+        </div>
+
+        <div class="progress">
+          <p>
+            <b>Diseño Web</b>
+            <b>60%</b>
+          </p>
+          <progress value="60" min="0" max="100"></progress>
+        </div>
+
+        <div class="progress">
+          <p>
+            <b>Marketing Digital</b>
+            <b>90%</b>
+          </p>
+          <progress value="90" min="0" max="100"></progress>
+        </div>
+      </article>
     </section>
 
     <section id="servicios" class="services">
