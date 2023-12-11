@@ -93,6 +93,82 @@ p {
 
 /*COMPONENTS*/
 
+/*CAROUSEL*/
+
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+}
+
+.carousel {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  max-width: 800px;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: var(--carousel-bg-color);
+}
+
+.carousel .slides {
+  padding-left: 0;
+  /* 100% por cada slide */
+  width: 400%;
+  display: flex;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  border: medium solid var(--gray-dark-color);
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+}
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4 {
+  background-color: var(--gray-dark-color);
+}
+
 /*HERO IMAGE*/
 
 .hero-image {
@@ -262,6 +338,12 @@ progress::-moz-progress-bar {
 
 /*UTILITIES*/
 
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
 .bg-gray-light {
   background-color: var(--gray-light-color);
 }
@@ -310,6 +392,10 @@ progress::-moz-progress-bar {
   text-align: center;
   width: 250px;
   color: var(--title-color);
+}
+
+.text-first-color {
+  color: var(--first-color);
 }
 
 .text-left {
@@ -462,12 +548,12 @@ progress::-moz-progress-bar {
     grid-column: span 2;
   }
 
-  .portfolio-modal{
+  .portfolio-modal {
     flex-direction: row;
     max-width: 800px;
   }
 
-  .portfoio-info{
+  .portfoio-info {
     margin-left: 1rem;
     align-self: center;
   }
@@ -516,7 +602,7 @@ progress::-moz-progress-bar {
     grid-column: span 3;
   }
 
-  .portfoio-info{
+  .portfoio-info {
     margin-left: 1rem;
     align-self: center;
   }
@@ -530,7 +616,7 @@ progress::-moz-progress-bar {
     grid-column: span 3;
   }
 
-  .portfolio-modal img{
+  .portfolio-modal img {
     flex-direction: row;
     margin: 1rem;
   }
