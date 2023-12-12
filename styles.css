@@ -543,6 +543,18 @@ progress::-moz-progress-bar {
   margin-top: -1rem;
 }
 
+.footer{
+  margin-bottom: var(--header-height);
+  padding: .5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
+}
+
+.footer a{
+  text-decoration: none;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -710,7 +722,11 @@ progress::-moz-progress-bar {
   .contact-cards{
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
-  } 
+  }
+  
+  .footer{
+    margin-bottom: 0;
+  }
 
   .header {
     position: sticky;
